@@ -1,0 +1,2897 @@
+[
+  {
+    "db_id": "dog_kennels",
+    "table_name": "breeds",
+    "table_name_original": "Breeds",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__breeds.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "breed code",
+        "type": "text"
+      },
+      {
+        "col_idx": 2,
+        "name": "breed name",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table breeds. Columns: breed code (text); breed name (text)."
+  },
+  {
+    "db_id": "dog_kennels",
+    "table_name": "charges",
+    "table_name_original": "Charges",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__charges.csv",
+    "columns": [
+      {
+        "col_idx": 3,
+        "name": "charge id",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "charge type",
+        "type": "text"
+      },
+      {
+        "col_idx": 5,
+        "name": "charge amount",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table charges. Columns: charge id (number); charge type (text); charge amount (number)."
+  },
+  {
+    "db_id": "dog_kennels",
+    "table_name": "sizes",
+    "table_name_original": "Sizes",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__sizes.csv",
+    "columns": [
+      {
+        "col_idx": 6,
+        "name": "size code",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "size description",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table sizes. Columns: size code (text); size description (text)."
+  },
+  {
+    "db_id": "dog_kennels",
+    "table_name": "treatment types",
+    "table_name_original": "Treatment_Types",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__treatment types.csv",
+    "columns": [
+      {
+        "col_idx": 8,
+        "name": "treatment type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "treatment type description",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table treatment types. Columns: treatment type code (text); treatment type description (text)."
+  },
+  {
+    "db_id": "dog_kennels",
+    "table_name": "owners",
+    "table_name_original": "Owners",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__owners.csv",
+    "columns": [
+      {
+        "col_idx": 10,
+        "name": "owner id",
+        "type": "number"
+      },
+      {
+        "col_idx": 11,
+        "name": "first name",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "last name",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "street",
+        "type": "text"
+      },
+      {
+        "col_idx": 14,
+        "name": "city",
+        "type": "text"
+      },
+      {
+        "col_idx": 15,
+        "name": "state",
+        "type": "text"
+      },
+      {
+        "col_idx": 16,
+        "name": "zip code",
+        "type": "text"
+      },
+      {
+        "col_idx": 17,
+        "name": "email address",
+        "type": "text"
+      },
+      {
+        "col_idx": 18,
+        "name": "home phone",
+        "type": "text"
+      },
+      {
+        "col_idx": 19,
+        "name": "cell number",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table owners. Columns: owner id (number); first name (text); last name (text); street (text); city (text); state (text); zip code (text); email address (text); home phone (text); cell number (text)."
+  },
+  {
+    "db_id": "dog_kennels",
+    "table_name": "dogs",
+    "table_name_original": "Dogs",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__dogs.csv",
+    "columns": [
+      {
+        "col_idx": 20,
+        "name": "dog id",
+        "type": "number"
+      },
+      {
+        "col_idx": 21,
+        "name": "owner id",
+        "type": "number"
+      },
+      {
+        "col_idx": 22,
+        "name": "abandoned yes or no",
+        "type": "text"
+      },
+      {
+        "col_idx": 23,
+        "name": "breed code",
+        "type": "text"
+      },
+      {
+        "col_idx": 24,
+        "name": "size code",
+        "type": "text"
+      },
+      {
+        "col_idx": 25,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 26,
+        "name": "age",
+        "type": "text"
+      },
+      {
+        "col_idx": 27,
+        "name": "date of birth",
+        "type": "time"
+      },
+      {
+        "col_idx": 28,
+        "name": "gender",
+        "type": "text"
+      },
+      {
+        "col_idx": 29,
+        "name": "weight",
+        "type": "text"
+      },
+      {
+        "col_idx": 30,
+        "name": "date arrived",
+        "type": "time"
+      },
+      {
+        "col_idx": 31,
+        "name": "date adopted",
+        "type": "time"
+      },
+      {
+        "col_idx": 32,
+        "name": "date departed",
+        "type": "time"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table dogs. Columns: dog id (number); owner id (number); abandoned yes or no (text); breed code (text); size code (text); name (text); age (text); date of birth (time); gender (text); weight (text); date arrived (time); date adopted (time); date departed (time)."
+  },
+  {
+    "db_id": "dog_kennels",
+    "table_name": "professionals",
+    "table_name_original": "Professionals",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__professionals.csv",
+    "columns": [
+      {
+        "col_idx": 33,
+        "name": "professional id",
+        "type": "number"
+      },
+      {
+        "col_idx": 34,
+        "name": "role code",
+        "type": "text"
+      },
+      {
+        "col_idx": 35,
+        "name": "first name",
+        "type": "text"
+      },
+      {
+        "col_idx": 36,
+        "name": "street",
+        "type": "text"
+      },
+      {
+        "col_idx": 37,
+        "name": "city",
+        "type": "text"
+      },
+      {
+        "col_idx": 38,
+        "name": "state",
+        "type": "text"
+      },
+      {
+        "col_idx": 39,
+        "name": "zip code",
+        "type": "text"
+      },
+      {
+        "col_idx": 40,
+        "name": "last name",
+        "type": "text"
+      },
+      {
+        "col_idx": 41,
+        "name": "email address",
+        "type": "text"
+      },
+      {
+        "col_idx": 42,
+        "name": "home phone",
+        "type": "text"
+      },
+      {
+        "col_idx": 43,
+        "name": "cell number",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table professionals. Columns: professional id (number); role code (text); first name (text); street (text); city (text); state (text); zip code (text); last name (text); email address (text); home phone (text); cell number (text)."
+  },
+  {
+    "db_id": "dog_kennels",
+    "table_name": "treatments",
+    "table_name_original": "Treatments",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/dog_kennels__treatments.csv",
+    "columns": [
+      {
+        "col_idx": 44,
+        "name": "treatment id",
+        "type": "number"
+      },
+      {
+        "col_idx": 45,
+        "name": "dog id",
+        "type": "number"
+      },
+      {
+        "col_idx": 46,
+        "name": "professional id",
+        "type": "number"
+      },
+      {
+        "col_idx": 47,
+        "name": "treatment type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 48,
+        "name": "date of treatment",
+        "type": "time"
+      },
+      {
+        "col_idx": 49,
+        "name": "cost of treatment",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database dog_kennels, table treatments. Columns: treatment id (number); dog id (number); professional id (number); treatment type code (text); date of treatment (time); cost of treatment (number)."
+  },
+  {
+    "db_id": "flight_2",
+    "table_name": "airlines",
+    "table_name_original": "airlines",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/flight_2__airlines.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "airline id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "airline name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "abbreviation",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "country",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database flight_2, table airlines. Columns: airline id (number); airline name (text); abbreviation (text); country (text)."
+  },
+  {
+    "db_id": "flight_2",
+    "table_name": "airports",
+    "table_name_original": "airports",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/flight_2__airports.csv",
+    "columns": [
+      {
+        "col_idx": 5,
+        "name": "city",
+        "type": "text"
+      },
+      {
+        "col_idx": 6,
+        "name": "airport code",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "airport name",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "country",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "country abbrev",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database flight_2, table airports. Columns: city (text); airport code (text); airport name (text); country (text); country abbrev (text)."
+  },
+  {
+    "db_id": "flight_2",
+    "table_name": "flights",
+    "table_name_original": "flights",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/flight_2__flights.csv",
+    "columns": [
+      {
+        "col_idx": 10,
+        "name": "airline",
+        "type": "number"
+      },
+      {
+        "col_idx": 11,
+        "name": "flight number",
+        "type": "number"
+      },
+      {
+        "col_idx": 12,
+        "name": "source airport",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "destination airport",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database flight_2, table flights. Columns: airline (number); flight number (number); source airport (text); destination airport (text)."
+  },
+  {
+    "db_id": "pets_1",
+    "table_name": "student",
+    "table_name_original": "Student",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/pets_1__student.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "student id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "last name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "first name",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "age",
+        "type": "number"
+      },
+      {
+        "col_idx": 5,
+        "name": "sex",
+        "type": "text"
+      },
+      {
+        "col_idx": 6,
+        "name": "major",
+        "type": "number"
+      },
+      {
+        "col_idx": 7,
+        "name": "advisor",
+        "type": "number"
+      },
+      {
+        "col_idx": 8,
+        "name": "city code",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database pets_1, table student. Columns: student id (number); last name (text); first name (text); age (number); sex (text); major (number); advisor (number); city code (text)."
+  },
+  {
+    "db_id": "pets_1",
+    "table_name": "has pet",
+    "table_name_original": "Has_Pet",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/pets_1__has pet.csv",
+    "columns": [
+      {
+        "col_idx": 9,
+        "name": "student id",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "pet id",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database pets_1, table has pet. Columns: student id (number); pet id (number)."
+  },
+  {
+    "db_id": "pets_1",
+    "table_name": "pets",
+    "table_name_original": "Pets",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/pets_1__pets.csv",
+    "columns": [
+      {
+        "col_idx": 11,
+        "name": "pet id",
+        "type": "number"
+      },
+      {
+        "col_idx": 12,
+        "name": "pet type",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "pet age",
+        "type": "number"
+      },
+      {
+        "col_idx": 14,
+        "name": "weight",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database pets_1, table pets. Columns: pet id (number); pet type (text); pet age (number); weight (number)."
+  },
+  {
+    "db_id": "concert_singer",
+    "table_name": "stadium",
+    "table_name_original": "stadium",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/concert_singer__stadium.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "stadium id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "location",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "capacity",
+        "type": "number"
+      },
+      {
+        "col_idx": 5,
+        "name": "highest",
+        "type": "number"
+      },
+      {
+        "col_idx": 6,
+        "name": "lowest",
+        "type": "number"
+      },
+      {
+        "col_idx": 7,
+        "name": "average",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database concert_singer, table stadium. Columns: stadium id (number); location (text); name (text); capacity (number); highest (number); lowest (number); average (number)."
+  },
+  {
+    "db_id": "concert_singer",
+    "table_name": "singer",
+    "table_name_original": "singer",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/concert_singer__singer.csv",
+    "columns": [
+      {
+        "col_idx": 8,
+        "name": "singer id",
+        "type": "number"
+      },
+      {
+        "col_idx": 9,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 10,
+        "name": "country",
+        "type": "text"
+      },
+      {
+        "col_idx": 11,
+        "name": "song name",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "song release year",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "age",
+        "type": "number"
+      },
+      {
+        "col_idx": 14,
+        "name": "is male",
+        "type": "others"
+      }
+    ],
+    "schema_text": "Database concert_singer, table singer. Columns: singer id (number); name (text); country (text); song name (text); song release year (text); age (number); is male (others)."
+  },
+  {
+    "db_id": "concert_singer",
+    "table_name": "concert",
+    "table_name_original": "concert",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/concert_singer__concert.csv",
+    "columns": [
+      {
+        "col_idx": 15,
+        "name": "concert id",
+        "type": "number"
+      },
+      {
+        "col_idx": 16,
+        "name": "concert name",
+        "type": "text"
+      },
+      {
+        "col_idx": 17,
+        "name": "theme",
+        "type": "text"
+      },
+      {
+        "col_idx": 18,
+        "name": "stadium id",
+        "type": "text"
+      },
+      {
+        "col_idx": 19,
+        "name": "year",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database concert_singer, table concert. Columns: concert id (number); concert name (text); theme (text); stadium id (text); year (text)."
+  },
+  {
+    "db_id": "concert_singer",
+    "table_name": "singer in concert",
+    "table_name_original": "singer_in_concert",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/concert_singer__singer in concert.csv",
+    "columns": [
+      {
+        "col_idx": 20,
+        "name": "concert id",
+        "type": "number"
+      },
+      {
+        "col_idx": 21,
+        "name": "singer id",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database concert_singer, table singer in concert. Columns: concert id (number); singer id (text)."
+  },
+  {
+    "db_id": "museum_visit",
+    "table_name": "museum",
+    "table_name_original": "museum",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/museum_visit__museum.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "museum id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "num of staff",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "open year",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database museum_visit, table museum. Columns: museum id (number); name (text); num of staff (number); open year (text)."
+  },
+  {
+    "db_id": "museum_visit",
+    "table_name": "customer",
+    "table_name_original": "visitor",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/museum_visit__customer.csv",
+    "columns": [
+      {
+        "col_idx": 5,
+        "name": "customer id",
+        "type": "number"
+      },
+      {
+        "col_idx": 6,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "level of membership",
+        "type": "number"
+      },
+      {
+        "col_idx": 8,
+        "name": "age",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database museum_visit, table customer. Columns: customer id (number); name (text); level of membership (number); age (number)."
+  },
+  {
+    "db_id": "museum_visit",
+    "table_name": "visit",
+    "table_name_original": "visit",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/museum_visit__visit.csv",
+    "columns": [
+      {
+        "col_idx": 9,
+        "name": "museum id",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "customer id",
+        "type": "text"
+      },
+      {
+        "col_idx": 11,
+        "name": "num of ticket",
+        "type": "number"
+      },
+      {
+        "col_idx": 12,
+        "name": "total spent",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database museum_visit, table visit. Columns: museum id (number); customer id (text); num of ticket (number); total spent (number)."
+  },
+  {
+    "db_id": "battle_death",
+    "table_name": "battle",
+    "table_name_original": "battle",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/battle_death__battle.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "date",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "bulgarian commander",
+        "type": "text"
+      },
+      {
+        "col_idx": 5,
+        "name": "latin commander",
+        "type": "text"
+      },
+      {
+        "col_idx": 6,
+        "name": "result",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database battle_death, table battle. Columns: id (number); name (text); date (text); bulgarian commander (text); latin commander (text); result (text)."
+  },
+  {
+    "db_id": "battle_death",
+    "table_name": "ship",
+    "table_name_original": "ship",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/battle_death__ship.csv",
+    "columns": [
+      {
+        "col_idx": 7,
+        "name": "lost in battle",
+        "type": "number"
+      },
+      {
+        "col_idx": 8,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 9,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 10,
+        "name": "tonnage",
+        "type": "text"
+      },
+      {
+        "col_idx": 11,
+        "name": "ship type",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "location",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "disposition of ship",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database battle_death, table ship. Columns: lost in battle (number); id (number); name (text); tonnage (text); ship type (text); location (text); disposition of ship (text)."
+  },
+  {
+    "db_id": "battle_death",
+    "table_name": "death",
+    "table_name_original": "death",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/battle_death__death.csv",
+    "columns": [
+      {
+        "col_idx": 14,
+        "name": "caused by ship id",
+        "type": "number"
+      },
+      {
+        "col_idx": 15,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 16,
+        "name": "note",
+        "type": "text"
+      },
+      {
+        "col_idx": 17,
+        "name": "killed",
+        "type": "number"
+      },
+      {
+        "col_idx": 18,
+        "name": "injured",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database battle_death, table death. Columns: caused by ship id (number); id (number); note (text); killed (number); injured (number)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "addresses",
+    "table_name_original": "Addresses",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__addresses.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "address id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "line 1",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "line 2",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "line 3",
+        "type": "text"
+      },
+      {
+        "col_idx": 5,
+        "name": "city",
+        "type": "text"
+      },
+      {
+        "col_idx": 6,
+        "name": "zip postcode",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "state province county",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "country",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "other address details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table addresses. Columns: address id (number); line 1 (text); line 2 (text); line 3 (text); city (text); zip postcode (text); state province county (text); country (text); other address details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "courses",
+    "table_name_original": "Courses",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__courses.csv",
+    "columns": [
+      {
+        "col_idx": 10,
+        "name": "course id",
+        "type": "number"
+      },
+      {
+        "col_idx": 11,
+        "name": "course name",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "course description",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table courses. Columns: course id (number); course name (text); course description (text); other details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "departments",
+    "table_name_original": "Departments",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__departments.csv",
+    "columns": [
+      {
+        "col_idx": 14,
+        "name": "department id",
+        "type": "number"
+      },
+      {
+        "col_idx": 15,
+        "name": "department name",
+        "type": "text"
+      },
+      {
+        "col_idx": 16,
+        "name": "department description",
+        "type": "text"
+      },
+      {
+        "col_idx": 17,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table departments. Columns: department id (number); department name (text); department description (text); other details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "degree programs",
+    "table_name_original": "Degree_Programs",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__degree programs.csv",
+    "columns": [
+      {
+        "col_idx": 18,
+        "name": "degree program id",
+        "type": "number"
+      },
+      {
+        "col_idx": 19,
+        "name": "department id",
+        "type": "number"
+      },
+      {
+        "col_idx": 20,
+        "name": "degree summary name",
+        "type": "text"
+      },
+      {
+        "col_idx": 21,
+        "name": "degree summary description",
+        "type": "text"
+      },
+      {
+        "col_idx": 22,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table degree programs. Columns: degree program id (number); department id (number); degree summary name (text); degree summary description (text); other details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "sections",
+    "table_name_original": "Sections",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__sections.csv",
+    "columns": [
+      {
+        "col_idx": 23,
+        "name": "section id",
+        "type": "number"
+      },
+      {
+        "col_idx": 24,
+        "name": "course id",
+        "type": "number"
+      },
+      {
+        "col_idx": 25,
+        "name": "section name",
+        "type": "text"
+      },
+      {
+        "col_idx": 26,
+        "name": "section description",
+        "type": "text"
+      },
+      {
+        "col_idx": 27,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table sections. Columns: section id (number); course id (number); section name (text); section description (text); other details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "semesters",
+    "table_name_original": "Semesters",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__semesters.csv",
+    "columns": [
+      {
+        "col_idx": 28,
+        "name": "semester id",
+        "type": "number"
+      },
+      {
+        "col_idx": 29,
+        "name": "semester name",
+        "type": "text"
+      },
+      {
+        "col_idx": 30,
+        "name": "semester description",
+        "type": "text"
+      },
+      {
+        "col_idx": 31,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table semesters. Columns: semester id (number); semester name (text); semester description (text); other details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "students",
+    "table_name_original": "Students",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__students.csv",
+    "columns": [
+      {
+        "col_idx": 32,
+        "name": "student id",
+        "type": "number"
+      },
+      {
+        "col_idx": 33,
+        "name": "current address id",
+        "type": "number"
+      },
+      {
+        "col_idx": 34,
+        "name": "permanent address id",
+        "type": "number"
+      },
+      {
+        "col_idx": 35,
+        "name": "first name",
+        "type": "text"
+      },
+      {
+        "col_idx": 36,
+        "name": "middle name",
+        "type": "text"
+      },
+      {
+        "col_idx": 37,
+        "name": "last name",
+        "type": "text"
+      },
+      {
+        "col_idx": 38,
+        "name": "cell mobile number",
+        "type": "text"
+      },
+      {
+        "col_idx": 39,
+        "name": "email address",
+        "type": "text"
+      },
+      {
+        "col_idx": 40,
+        "name": "ssn",
+        "type": "text"
+      },
+      {
+        "col_idx": 41,
+        "name": "date first registered",
+        "type": "time"
+      },
+      {
+        "col_idx": 42,
+        "name": "date left",
+        "type": "time"
+      },
+      {
+        "col_idx": 43,
+        "name": "other student details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table students. Columns: student id (number); current address id (number); permanent address id (number); first name (text); middle name (text); last name (text); cell mobile number (text); email address (text); ssn (text); date first registered (time); date left (time); other student details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "student enrolment",
+    "table_name_original": "Student_Enrolment",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__student enrolment.csv",
+    "columns": [
+      {
+        "col_idx": 44,
+        "name": "student enrolment id",
+        "type": "number"
+      },
+      {
+        "col_idx": 45,
+        "name": "degree program id",
+        "type": "number"
+      },
+      {
+        "col_idx": 46,
+        "name": "semester id",
+        "type": "number"
+      },
+      {
+        "col_idx": 47,
+        "name": "student id",
+        "type": "number"
+      },
+      {
+        "col_idx": 48,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table student enrolment. Columns: student enrolment id (number); degree program id (number); semester id (number); student id (number); other details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "student enrolment courses",
+    "table_name_original": "Student_Enrolment_Courses",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__student enrolment courses.csv",
+    "columns": [
+      {
+        "col_idx": 49,
+        "name": "student course id",
+        "type": "number"
+      },
+      {
+        "col_idx": 50,
+        "name": "course id",
+        "type": "number"
+      },
+      {
+        "col_idx": 51,
+        "name": "student enrolment id",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table student enrolment courses. Columns: student course id (number); course id (number); student enrolment id (number)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "transcripts",
+    "table_name_original": "Transcripts",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__transcripts.csv",
+    "columns": [
+      {
+        "col_idx": 52,
+        "name": "transcript id",
+        "type": "number"
+      },
+      {
+        "col_idx": 53,
+        "name": "transcript date",
+        "type": "time"
+      },
+      {
+        "col_idx": 54,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table transcripts. Columns: transcript id (number); transcript date (time); other details (text)."
+  },
+  {
+    "db_id": "student_transcripts_tracking",
+    "table_name": "transcript contents",
+    "table_name_original": "Transcript_Contents",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/student_transcripts_tracking__transcript contents.csv",
+    "columns": [
+      {
+        "col_idx": 55,
+        "name": "student course id",
+        "type": "number"
+      },
+      {
+        "col_idx": 56,
+        "name": "transcript id",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database student_transcripts_tracking, table transcript contents. Columns: student course id (number); transcript id (number)."
+  },
+  {
+    "db_id": "singer",
+    "table_name": "singer",
+    "table_name_original": "singer",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/singer__singer.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "singer id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "birth year",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "net worth millions",
+        "type": "number"
+      },
+      {
+        "col_idx": 5,
+        "name": "citizenship",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database singer, table singer. Columns: singer id (number); name (text); birth year (number); net worth millions (number); citizenship (text)."
+  },
+  {
+    "db_id": "singer",
+    "table_name": "song",
+    "table_name_original": "song",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/singer__song.csv",
+    "columns": [
+      {
+        "col_idx": 6,
+        "name": "song id",
+        "type": "number"
+      },
+      {
+        "col_idx": 7,
+        "name": "title",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "singer id",
+        "type": "number"
+      },
+      {
+        "col_idx": 9,
+        "name": "sales",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "highest position",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database singer, table song. Columns: song id (number); title (text); singer id (number); sales (number); highest position (number)."
+  },
+  {
+    "db_id": "cre_Doc_Template_Mgt",
+    "table_name": "reference template types",
+    "table_name_original": "Ref_Template_Types",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/cre_Doc_Template_Mgt__reference template types.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "template type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 2,
+        "name": "template type description",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database cre_Doc_Template_Mgt, table reference template types. Columns: template type code (text); template type description (text)."
+  },
+  {
+    "db_id": "cre_Doc_Template_Mgt",
+    "table_name": "templates",
+    "table_name_original": "Templates",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/cre_Doc_Template_Mgt__templates.csv",
+    "columns": [
+      {
+        "col_idx": 3,
+        "name": "template id",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "version number",
+        "type": "number"
+      },
+      {
+        "col_idx": 5,
+        "name": "template type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 6,
+        "name": "date effective from",
+        "type": "time"
+      },
+      {
+        "col_idx": 7,
+        "name": "date effective to",
+        "type": "time"
+      },
+      {
+        "col_idx": 8,
+        "name": "template details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database cre_Doc_Template_Mgt, table templates. Columns: template id (number); version number (number); template type code (text); date effective from (time); date effective to (time); template details (text)."
+  },
+  {
+    "db_id": "cre_Doc_Template_Mgt",
+    "table_name": "documents",
+    "table_name_original": "Documents",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/cre_Doc_Template_Mgt__documents.csv",
+    "columns": [
+      {
+        "col_idx": 9,
+        "name": "document id",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "template id",
+        "type": "number"
+      },
+      {
+        "col_idx": 11,
+        "name": "document name",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "document description",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database cre_Doc_Template_Mgt, table documents. Columns: document id (number); template id (number); document name (text); document description (text); other details (text)."
+  },
+  {
+    "db_id": "cre_Doc_Template_Mgt",
+    "table_name": "paragraphs",
+    "table_name_original": "Paragraphs",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/cre_Doc_Template_Mgt__paragraphs.csv",
+    "columns": [
+      {
+        "col_idx": 14,
+        "name": "paragraph id",
+        "type": "number"
+      },
+      {
+        "col_idx": 15,
+        "name": "document id",
+        "type": "number"
+      },
+      {
+        "col_idx": 16,
+        "name": "paragraph text",
+        "type": "text"
+      },
+      {
+        "col_idx": 17,
+        "name": "other details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database cre_Doc_Template_Mgt, table paragraphs. Columns: paragraph id (number); document id (number); paragraph text (text); other details (text)."
+  },
+  {
+    "db_id": "world_1",
+    "table_name": "city",
+    "table_name_original": "city",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/world_1__city.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "country code",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "district",
+        "type": "text"
+      },
+      {
+        "col_idx": 5,
+        "name": "population",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database world_1, table city. Columns: id (number); name (text); country code (text); district (text); population (number)."
+  },
+  {
+    "db_id": "world_1",
+    "table_name": "sqlite sequence",
+    "table_name_original": "sqlite_sequence",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/world_1__sqlite sequence.csv",
+    "columns": [
+      {
+        "col_idx": 6,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "seq",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database world_1, table sqlite sequence. Columns: name (text); seq (text)."
+  },
+  {
+    "db_id": "world_1",
+    "table_name": "country",
+    "table_name_original": "country",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/world_1__country.csv",
+    "columns": [
+      {
+        "col_idx": 8,
+        "name": "code",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 10,
+        "name": "continent",
+        "type": "text"
+      },
+      {
+        "col_idx": 11,
+        "name": "region",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "surface area",
+        "type": "number"
+      },
+      {
+        "col_idx": 13,
+        "name": "indepdent year",
+        "type": "number"
+      },
+      {
+        "col_idx": 14,
+        "name": "population",
+        "type": "number"
+      },
+      {
+        "col_idx": 15,
+        "name": "life expectancy",
+        "type": "number"
+      },
+      {
+        "col_idx": 16,
+        "name": "gnp",
+        "type": "number"
+      },
+      {
+        "col_idx": 17,
+        "name": "gnp old",
+        "type": "number"
+      },
+      {
+        "col_idx": 18,
+        "name": "local name",
+        "type": "text"
+      },
+      {
+        "col_idx": 19,
+        "name": "government form",
+        "type": "text"
+      },
+      {
+        "col_idx": 20,
+        "name": "head of state",
+        "type": "text"
+      },
+      {
+        "col_idx": 21,
+        "name": "capital",
+        "type": "number"
+      },
+      {
+        "col_idx": 22,
+        "name": "code2",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database world_1, table country. Columns: code (text); name (text); continent (text); region (text); surface area (number); indepdent year (number); population (number); life expectancy (number); gnp (number); gnp old (number); local name (text); government form (text); head of state (text); capital (number); code2 (text)."
+  },
+  {
+    "db_id": "world_1",
+    "table_name": "countrylanguage",
+    "table_name_original": "countrylanguage",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/world_1__countrylanguage.csv",
+    "columns": [
+      {
+        "col_idx": 23,
+        "name": "countrycode",
+        "type": "text"
+      },
+      {
+        "col_idx": 24,
+        "name": "language",
+        "type": "text"
+      },
+      {
+        "col_idx": 25,
+        "name": "is official",
+        "type": "text"
+      },
+      {
+        "col_idx": 26,
+        "name": "percentage",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database world_1, table countrylanguage. Columns: countrycode (text); language (text); is official (text); percentage (number)."
+  },
+  {
+    "db_id": "employee_hire_evaluation",
+    "table_name": "employee",
+    "table_name_original": "employee",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/employee_hire_evaluation__employee.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "employee id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "age",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "city",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database employee_hire_evaluation, table employee. Columns: employee id (number); name (text); age (number); city (text)."
+  },
+  {
+    "db_id": "employee_hire_evaluation",
+    "table_name": "shop",
+    "table_name_original": "shop",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/employee_hire_evaluation__shop.csv",
+    "columns": [
+      {
+        "col_idx": 5,
+        "name": "shop id",
+        "type": "number"
+      },
+      {
+        "col_idx": 6,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "location",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "district",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "number products",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "manager name",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database employee_hire_evaluation, table shop. Columns: shop id (number); name (text); location (text); district (text); number products (number); manager name (text)."
+  },
+  {
+    "db_id": "employee_hire_evaluation",
+    "table_name": "hiring",
+    "table_name_original": "hiring",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/employee_hire_evaluation__hiring.csv",
+    "columns": [
+      {
+        "col_idx": 11,
+        "name": "shop id",
+        "type": "number"
+      },
+      {
+        "col_idx": 12,
+        "name": "employee id",
+        "type": "number"
+      },
+      {
+        "col_idx": 13,
+        "name": "start from",
+        "type": "text"
+      },
+      {
+        "col_idx": 14,
+        "name": "is full time",
+        "type": "others"
+      }
+    ],
+    "schema_text": "Database employee_hire_evaluation, table hiring. Columns: shop id (number); employee id (number); start from (text); is full time (others)."
+  },
+  {
+    "db_id": "employee_hire_evaluation",
+    "table_name": "evaluation",
+    "table_name_original": "evaluation",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/employee_hire_evaluation__evaluation.csv",
+    "columns": [
+      {
+        "col_idx": 15,
+        "name": "employee id",
+        "type": "text"
+      },
+      {
+        "col_idx": 16,
+        "name": "year awarded",
+        "type": "text"
+      },
+      {
+        "col_idx": 17,
+        "name": "bonus",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database employee_hire_evaluation, table evaluation. Columns: employee id (text); year awarded (text); bonus (number)."
+  },
+  {
+    "db_id": "network_1",
+    "table_name": "high schooler",
+    "table_name_original": "Highschooler",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/network_1__high schooler.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "grade",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database network_1, table high schooler. Columns: id (number); name (text); grade (number)."
+  },
+  {
+    "db_id": "network_1",
+    "table_name": "friend",
+    "table_name_original": "Friend",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/network_1__friend.csv",
+    "columns": [
+      {
+        "col_idx": 4,
+        "name": "student id",
+        "type": "number"
+      },
+      {
+        "col_idx": 5,
+        "name": "friend id",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database network_1, table friend. Columns: student id (number); friend id (number)."
+  },
+  {
+    "db_id": "network_1",
+    "table_name": "likes",
+    "table_name_original": "Likes",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/network_1__likes.csv",
+    "columns": [
+      {
+        "col_idx": 6,
+        "name": "student id",
+        "type": "number"
+      },
+      {
+        "col_idx": 7,
+        "name": "liked id",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database network_1, table likes. Columns: student id (number); liked id (number)."
+  },
+  {
+    "db_id": "poker_player",
+    "table_name": "poker player",
+    "table_name_original": "poker_player",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/poker_player__poker player.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "poker player id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "people id",
+        "type": "number"
+      },
+      {
+        "col_idx": 3,
+        "name": "final table made",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "best finish",
+        "type": "number"
+      },
+      {
+        "col_idx": 5,
+        "name": "money rank",
+        "type": "number"
+      },
+      {
+        "col_idx": 6,
+        "name": "earnings",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database poker_player, table poker player. Columns: poker player id (number); people id (number); final table made (number); best finish (number); money rank (number); earnings (number)."
+  },
+  {
+    "db_id": "poker_player",
+    "table_name": "people",
+    "table_name_original": "people",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/poker_player__people.csv",
+    "columns": [
+      {
+        "col_idx": 7,
+        "name": "people id",
+        "type": "number"
+      },
+      {
+        "col_idx": 8,
+        "name": "nationality",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 10,
+        "name": "birth date",
+        "type": "text"
+      },
+      {
+        "col_idx": 11,
+        "name": "height",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database poker_player, table people. Columns: people id (number); nationality (text); name (text); birth date (text); height (number)."
+  },
+  {
+    "db_id": "real_estate_properties",
+    "table_name": "reference feature types",
+    "table_name_original": "Ref_Feature_Types",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/real_estate_properties__reference feature types.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "feature type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 2,
+        "name": "feature type name",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database real_estate_properties, table reference feature types. Columns: feature type code (text); feature type name (text)."
+  },
+  {
+    "db_id": "real_estate_properties",
+    "table_name": "reference property types",
+    "table_name_original": "Ref_Property_Types",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/real_estate_properties__reference property types.csv",
+    "columns": [
+      {
+        "col_idx": 3,
+        "name": "property type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "property type description",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database real_estate_properties, table reference property types. Columns: property type code (text); property type description (text)."
+  },
+  {
+    "db_id": "real_estate_properties",
+    "table_name": "other available features",
+    "table_name_original": "Other_Available_Features",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/real_estate_properties__other available features.csv",
+    "columns": [
+      {
+        "col_idx": 5,
+        "name": "feature id",
+        "type": "number"
+      },
+      {
+        "col_idx": 6,
+        "name": "feature type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "feature name",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "feature description",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database real_estate_properties, table other available features. Columns: feature id (number); feature type code (text); feature name (text); feature description (text)."
+  },
+  {
+    "db_id": "real_estate_properties",
+    "table_name": "properties",
+    "table_name_original": "Properties",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/real_estate_properties__properties.csv",
+    "columns": [
+      {
+        "col_idx": 9,
+        "name": "property id",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "property type code",
+        "type": "text"
+      },
+      {
+        "col_idx": 11,
+        "name": "date on market",
+        "type": "time"
+      },
+      {
+        "col_idx": 12,
+        "name": "date sold",
+        "type": "time"
+      },
+      {
+        "col_idx": 13,
+        "name": "property name",
+        "type": "text"
+      },
+      {
+        "col_idx": 14,
+        "name": "property address",
+        "type": "text"
+      },
+      {
+        "col_idx": 15,
+        "name": "room count",
+        "type": "number"
+      },
+      {
+        "col_idx": 16,
+        "name": "vendor requested price",
+        "type": "number"
+      },
+      {
+        "col_idx": 17,
+        "name": "buyer offered price",
+        "type": "number"
+      },
+      {
+        "col_idx": 18,
+        "name": "agreed selling price",
+        "type": "number"
+      },
+      {
+        "col_idx": 19,
+        "name": "apt feature 1",
+        "type": "text"
+      },
+      {
+        "col_idx": 20,
+        "name": "apt feature 2",
+        "type": "text"
+      },
+      {
+        "col_idx": 21,
+        "name": "apt feature 3",
+        "type": "text"
+      },
+      {
+        "col_idx": 22,
+        "name": "fld feature 1",
+        "type": "text"
+      },
+      {
+        "col_idx": 23,
+        "name": "fld feature 2",
+        "type": "text"
+      },
+      {
+        "col_idx": 24,
+        "name": "fld feature 3",
+        "type": "text"
+      },
+      {
+        "col_idx": 25,
+        "name": "hse feature 1",
+        "type": "text"
+      },
+      {
+        "col_idx": 26,
+        "name": "hse feature 2",
+        "type": "text"
+      },
+      {
+        "col_idx": 27,
+        "name": "hse feature 3",
+        "type": "text"
+      },
+      {
+        "col_idx": 28,
+        "name": "oth feature 1",
+        "type": "text"
+      },
+      {
+        "col_idx": 29,
+        "name": "oth feature 2",
+        "type": "text"
+      },
+      {
+        "col_idx": 30,
+        "name": "oth feature 3",
+        "type": "text"
+      },
+      {
+        "col_idx": 31,
+        "name": "shp feature 1",
+        "type": "text"
+      },
+      {
+        "col_idx": 32,
+        "name": "shp feature 2",
+        "type": "text"
+      },
+      {
+        "col_idx": 33,
+        "name": "shp feature 3",
+        "type": "text"
+      },
+      {
+        "col_idx": 34,
+        "name": "other property details",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database real_estate_properties, table properties. Columns: property id (number); property type code (text); date on market (time); date sold (time); property name (text); property address (text); room count (number); vendor requested price (number); buyer offered price (number); agreed selling price (number); apt feature 1 (text); apt feature 2 (text); apt feature 3 (text); fld feature 1 (text); fld feature 2 (text); fld feature 3 (text); hse feature 1 (text); hse feature 2 (text); hse feature 3 (text); oth feature 1 (text); oth feature 2 (text); oth feature 3 (text); shp feature 1 (text); shp feature 2 (text); shp feature 3 (text); other property details (text)."
+  },
+  {
+    "db_id": "real_estate_properties",
+    "table_name": "other property features",
+    "table_name_original": "Other_Property_Features",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/real_estate_properties__other property features.csv",
+    "columns": [
+      {
+        "col_idx": 35,
+        "name": "property id",
+        "type": "number"
+      },
+      {
+        "col_idx": 36,
+        "name": "feature id",
+        "type": "number"
+      },
+      {
+        "col_idx": 37,
+        "name": "property feature description",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database real_estate_properties, table other property features. Columns: property id (number); feature id (number); property feature description (text)."
+  },
+  {
+    "db_id": "course_teach",
+    "table_name": "course",
+    "table_name_original": "course",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/course_teach__course.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "course id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "staring date",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "course",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database course_teach, table course. Columns: course id (number); staring date (text); course (text)."
+  },
+  {
+    "db_id": "course_teach",
+    "table_name": "teacher",
+    "table_name_original": "teacher",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/course_teach__teacher.csv",
+    "columns": [
+      {
+        "col_idx": 4,
+        "name": "teacher id",
+        "type": "number"
+      },
+      {
+        "col_idx": 5,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 6,
+        "name": "age",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "hometown",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database course_teach, table teacher. Columns: teacher id (number); name (text); age (text); hometown (text)."
+  },
+  {
+    "db_id": "course_teach",
+    "table_name": "course arrange",
+    "table_name_original": "course_arrange",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/course_teach__course arrange.csv",
+    "columns": [
+      {
+        "col_idx": 8,
+        "name": "course id",
+        "type": "number"
+      },
+      {
+        "col_idx": 9,
+        "name": "teacher id",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "grade",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database course_teach, table course arrange. Columns: course id (number); teacher id (number); grade (number)."
+  },
+  {
+    "db_id": "voter_1",
+    "table_name": "area code state",
+    "table_name_original": "AREA_CODE_STATE",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/voter_1__area code state.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "area code",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "state",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database voter_1, table area code state. Columns: area code (number); state (text)."
+  },
+  {
+    "db_id": "voter_1",
+    "table_name": "contestants",
+    "table_name_original": "CONTESTANTS",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/voter_1__contestants.csv",
+    "columns": [
+      {
+        "col_idx": 3,
+        "name": "contestant number",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "contestant name",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database voter_1, table contestants. Columns: contestant number (number); contestant name (text)."
+  },
+  {
+    "db_id": "voter_1",
+    "table_name": "votes",
+    "table_name_original": "VOTES",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/voter_1__votes.csv",
+    "columns": [
+      {
+        "col_idx": 5,
+        "name": "vote id",
+        "type": "number"
+      },
+      {
+        "col_idx": 6,
+        "name": "phone number",
+        "type": "number"
+      },
+      {
+        "col_idx": 7,
+        "name": "state",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "contestant number",
+        "type": "number"
+      },
+      {
+        "col_idx": 9,
+        "name": "created",
+        "type": "time"
+      }
+    ],
+    "schema_text": "Database voter_1, table votes. Columns: vote id (number); phone number (number); state (text); contestant number (number); created (time)."
+  },
+  {
+    "db_id": "wta_1",
+    "table_name": "matches",
+    "table_name_original": "matches",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/wta_1__matches.csv",
+    "columns": [
+      {
+        "col_idx": 7,
+        "name": "best of",
+        "type": "number"
+      },
+      {
+        "col_idx": 8,
+        "name": "draw size",
+        "type": "number"
+      },
+      {
+        "col_idx": 9,
+        "name": "loser age",
+        "type": "number"
+      },
+      {
+        "col_idx": 10,
+        "name": "loser entry",
+        "type": "text"
+      },
+      {
+        "col_idx": 11,
+        "name": "loser hand",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "loser ht",
+        "type": "number"
+      },
+      {
+        "col_idx": 13,
+        "name": "loser id",
+        "type": "number"
+      },
+      {
+        "col_idx": 14,
+        "name": "loser ioc",
+        "type": "text"
+      },
+      {
+        "col_idx": 15,
+        "name": "loser name",
+        "type": "text"
+      },
+      {
+        "col_idx": 16,
+        "name": "loser rank",
+        "type": "number"
+      },
+      {
+        "col_idx": 17,
+        "name": "loser rank points",
+        "type": "number"
+      },
+      {
+        "col_idx": 18,
+        "name": "loser seed",
+        "type": "number"
+      },
+      {
+        "col_idx": 19,
+        "name": "match num",
+        "type": "number"
+      },
+      {
+        "col_idx": 20,
+        "name": "minutes",
+        "type": "number"
+      },
+      {
+        "col_idx": 21,
+        "name": "round",
+        "type": "text"
+      },
+      {
+        "col_idx": 22,
+        "name": "score",
+        "type": "text"
+      },
+      {
+        "col_idx": 23,
+        "name": "surface",
+        "type": "text"
+      },
+      {
+        "col_idx": 24,
+        "name": "tourney date",
+        "type": "time"
+      },
+      {
+        "col_idx": 25,
+        "name": "tourney id",
+        "type": "text"
+      },
+      {
+        "col_idx": 26,
+        "name": "tourney level",
+        "type": "text"
+      },
+      {
+        "col_idx": 27,
+        "name": "tourney name",
+        "type": "text"
+      },
+      {
+        "col_idx": 28,
+        "name": "winner age",
+        "type": "number"
+      },
+      {
+        "col_idx": 29,
+        "name": "winner entry",
+        "type": "text"
+      },
+      {
+        "col_idx": 30,
+        "name": "winner hand",
+        "type": "text"
+      },
+      {
+        "col_idx": 31,
+        "name": "winner ht",
+        "type": "number"
+      },
+      {
+        "col_idx": 32,
+        "name": "winner id",
+        "type": "number"
+      },
+      {
+        "col_idx": 33,
+        "name": "winner ioc",
+        "type": "text"
+      },
+      {
+        "col_idx": 34,
+        "name": "winner name",
+        "type": "text"
+      },
+      {
+        "col_idx": 35,
+        "name": "winner rank",
+        "type": "number"
+      },
+      {
+        "col_idx": 36,
+        "name": "winner rank points",
+        "type": "number"
+      },
+      {
+        "col_idx": 37,
+        "name": "winner seed",
+        "type": "number"
+      },
+      {
+        "col_idx": 38,
+        "name": "year",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database wta_1, table matches. Columns: best of (number); draw size (number); loser age (number); loser entry (text); loser hand (text); loser ht (number); loser id (number); loser ioc (text); loser name (text); loser rank (number); loser rank points (number); loser seed (number); match num (number); minutes (number); round (text); score (text); surface (text); tourney date (time); tourney id (text); tourney level (text); tourney name (text); winner age (number); winner entry (text); winner hand (text); winner ht (number); winner id (number); winner ioc (text); winner name (text); winner rank (number); winner rank points (number); winner seed (number); year (number)."
+  },
+  {
+    "db_id": "wta_1",
+    "table_name": "rankings",
+    "table_name_original": "rankings",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/wta_1__rankings.csv",
+    "columns": [
+      {
+        "col_idx": 39,
+        "name": "ranking date",
+        "type": "time"
+      },
+      {
+        "col_idx": 40,
+        "name": "ranking",
+        "type": "number"
+      },
+      {
+        "col_idx": 41,
+        "name": "player id",
+        "type": "number"
+      },
+      {
+        "col_idx": 42,
+        "name": "ranking points",
+        "type": "number"
+      },
+      {
+        "col_idx": 43,
+        "name": "tours",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database wta_1, table rankings. Columns: ranking date (time); ranking (number); player id (number); ranking points (number); tours (number)."
+  },
+  {
+    "db_id": "orchestra",
+    "table_name": "conductor",
+    "table_name_original": "conductor",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/orchestra__conductor.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "conductor id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "age",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "nationality",
+        "type": "text"
+      },
+      {
+        "col_idx": 5,
+        "name": "year of work",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database orchestra, table conductor. Columns: conductor id (number); name (text); age (number); nationality (text); year of work (number)."
+  },
+  {
+    "db_id": "orchestra",
+    "table_name": "orchestra",
+    "table_name_original": "orchestra",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/orchestra__orchestra.csv",
+    "columns": [
+      {
+        "col_idx": 6,
+        "name": "orchestra id",
+        "type": "number"
+      },
+      {
+        "col_idx": 7,
+        "name": "orchestra",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "conductor id",
+        "type": "number"
+      },
+      {
+        "col_idx": 9,
+        "name": "record company",
+        "type": "text"
+      },
+      {
+        "col_idx": 10,
+        "name": "year of founded",
+        "type": "number"
+      },
+      {
+        "col_idx": 11,
+        "name": "major record format",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database orchestra, table orchestra. Columns: orchestra id (number); orchestra (text); conductor id (number); record company (text); year of founded (number); major record format (text)."
+  },
+  {
+    "db_id": "orchestra",
+    "table_name": "performance",
+    "table_name_original": "performance",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/orchestra__performance.csv",
+    "columns": [
+      {
+        "col_idx": 12,
+        "name": "performance id",
+        "type": "number"
+      },
+      {
+        "col_idx": 13,
+        "name": "orchestra id",
+        "type": "number"
+      },
+      {
+        "col_idx": 14,
+        "name": "type",
+        "type": "text"
+      },
+      {
+        "col_idx": 15,
+        "name": "date",
+        "type": "text"
+      },
+      {
+        "col_idx": 16,
+        "name": "official ratings (millions)",
+        "type": "number"
+      },
+      {
+        "col_idx": 17,
+        "name": "weekly rank",
+        "type": "text"
+      },
+      {
+        "col_idx": 18,
+        "name": "share",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database orchestra, table performance. Columns: performance id (number); orchestra id (number); type (text); date (text); official ratings (millions) (number); weekly rank (text); share (text)."
+  },
+  {
+    "db_id": "orchestra",
+    "table_name": "show",
+    "table_name_original": "show",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/orchestra__show.csv",
+    "columns": [
+      {
+        "col_idx": 19,
+        "name": "show id",
+        "type": "number"
+      },
+      {
+        "col_idx": 20,
+        "name": "performance id",
+        "type": "number"
+      },
+      {
+        "col_idx": 21,
+        "name": "if first show",
+        "type": "others"
+      },
+      {
+        "col_idx": 22,
+        "name": "result",
+        "type": "text"
+      },
+      {
+        "col_idx": 23,
+        "name": "attendance",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database orchestra, table show. Columns: show id (number); performance id (number); if first show (others); result (text); attendance (number)."
+  },
+  {
+    "db_id": "car_1",
+    "table_name": "continents",
+    "table_name_original": "continents",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/car_1__continents.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "cont id",
+        "type": "number"
+      },
+      {
+        "col_idx": 2,
+        "name": "continent",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database car_1, table continents. Columns: cont id (number); continent (text)."
+  },
+  {
+    "db_id": "car_1",
+    "table_name": "countries",
+    "table_name_original": "countries",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/car_1__countries.csv",
+    "columns": [
+      {
+        "col_idx": 3,
+        "name": "country id",
+        "type": "number"
+      },
+      {
+        "col_idx": 4,
+        "name": "country name",
+        "type": "text"
+      },
+      {
+        "col_idx": 5,
+        "name": "continent",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database car_1, table countries. Columns: country id (number); country name (text); continent (number)."
+  },
+  {
+    "db_id": "car_1",
+    "table_name": "car makers",
+    "table_name_original": "car_makers",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/car_1__car makers.csv",
+    "columns": [
+      {
+        "col_idx": 6,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 7,
+        "name": "maker",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "full name",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "country",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database car_1, table car makers. Columns: id (number); maker (text); full name (text); country (text)."
+  },
+  {
+    "db_id": "car_1",
+    "table_name": "model list",
+    "table_name_original": "model_list",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/car_1__model list.csv",
+    "columns": [
+      {
+        "col_idx": 10,
+        "name": "model id",
+        "type": "number"
+      },
+      {
+        "col_idx": 11,
+        "name": "maker",
+        "type": "number"
+      },
+      {
+        "col_idx": 12,
+        "name": "model",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database car_1, table model list. Columns: model id (number); maker (number); model (text)."
+  },
+  {
+    "db_id": "car_1",
+    "table_name": "car names",
+    "table_name_original": "car_names",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/car_1__car names.csv",
+    "columns": [
+      {
+        "col_idx": 13,
+        "name": "make id",
+        "type": "number"
+      },
+      {
+        "col_idx": 14,
+        "name": "model",
+        "type": "text"
+      },
+      {
+        "col_idx": 15,
+        "name": "make",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database car_1, table car names. Columns: make id (number); model (text); make (text)."
+  },
+  {
+    "db_id": "car_1",
+    "table_name": "cars data",
+    "table_name_original": "cars_data",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/car_1__cars data.csv",
+    "columns": [
+      {
+        "col_idx": 16,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 17,
+        "name": "mpg",
+        "type": "text"
+      },
+      {
+        "col_idx": 18,
+        "name": "cylinders",
+        "type": "number"
+      },
+      {
+        "col_idx": 19,
+        "name": "edispl",
+        "type": "number"
+      },
+      {
+        "col_idx": 20,
+        "name": "horsepower",
+        "type": "text"
+      },
+      {
+        "col_idx": 21,
+        "name": "weight",
+        "type": "number"
+      },
+      {
+        "col_idx": 22,
+        "name": "accelerate",
+        "type": "number"
+      },
+      {
+        "col_idx": 23,
+        "name": "year",
+        "type": "number"
+      }
+    ],
+    "schema_text": "Database car_1, table cars data. Columns: id (number); mpg (text); cylinders (number); edispl (number); horsepower (text); weight (number); accelerate (number); year (number)."
+  },
+  {
+    "db_id": "tvshow",
+    "table_name": "tv channel",
+    "table_name_original": "TV_Channel",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/tvshow__tv channel.csv",
+    "columns": [
+      {
+        "col_idx": 1,
+        "name": "id",
+        "type": "text"
+      },
+      {
+        "col_idx": 2,
+        "name": "series name",
+        "type": "text"
+      },
+      {
+        "col_idx": 3,
+        "name": "country",
+        "type": "text"
+      },
+      {
+        "col_idx": 4,
+        "name": "language",
+        "type": "text"
+      },
+      {
+        "col_idx": 5,
+        "name": "content",
+        "type": "text"
+      },
+      {
+        "col_idx": 6,
+        "name": "pixel aspect ratio par",
+        "type": "text"
+      },
+      {
+        "col_idx": 7,
+        "name": "hight definition tv",
+        "type": "text"
+      },
+      {
+        "col_idx": 8,
+        "name": "pay per view ppv",
+        "type": "text"
+      },
+      {
+        "col_idx": 9,
+        "name": "package option",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database tvshow, table tv channel. Columns: id (text); series name (text); country (text); language (text); content (text); pixel aspect ratio par (text); hight definition tv (text); pay per view ppv (text); package option (text)."
+  },
+  {
+    "db_id": "tvshow",
+    "table_name": "tv series",
+    "table_name_original": "TV_series",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/tvshow__tv series.csv",
+    "columns": [
+      {
+        "col_idx": 10,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 11,
+        "name": "episode",
+        "type": "text"
+      },
+      {
+        "col_idx": 12,
+        "name": "air date",
+        "type": "text"
+      },
+      {
+        "col_idx": 13,
+        "name": "rating",
+        "type": "text"
+      },
+      {
+        "col_idx": 14,
+        "name": "share",
+        "type": "number"
+      },
+      {
+        "col_idx": 15,
+        "name": "18 49 rating share",
+        "type": "text"
+      },
+      {
+        "col_idx": 16,
+        "name": "viewers m",
+        "type": "text"
+      },
+      {
+        "col_idx": 17,
+        "name": "weekly rank",
+        "type": "number"
+      },
+      {
+        "col_idx": 18,
+        "name": "channel",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database tvshow, table tv series. Columns: id (number); episode (text); air date (text); rating (text); share (number); 18 49 rating share (text); viewers m (text); weekly rank (number); channel (text)."
+  },
+  {
+    "db_id": "tvshow",
+    "table_name": "cartoon",
+    "table_name_original": "Cartoon",
+    "csv_path": "/Users/kev_kyi/Documents/Masters_Fall/advanced_nlp/Project3/Schema_RAG_Text_To_SQL/data/tables/tvshow__cartoon.csv",
+    "columns": [
+      {
+        "col_idx": 19,
+        "name": "id",
+        "type": "number"
+      },
+      {
+        "col_idx": 20,
+        "name": "title",
+        "type": "text"
+      },
+      {
+        "col_idx": 21,
+        "name": "directed by",
+        "type": "text"
+      },
+      {
+        "col_idx": 22,
+        "name": "written by",
+        "type": "text"
+      },
+      {
+        "col_idx": 23,
+        "name": "original air date",
+        "type": "text"
+      },
+      {
+        "col_idx": 24,
+        "name": "production code",
+        "type": "number"
+      },
+      {
+        "col_idx": 25,
+        "name": "channel",
+        "type": "text"
+      }
+    ],
+    "schema_text": "Database tvshow, table cartoon. Columns: id (number); title (text); directed by (text); written by (text); original air date (text); production code (number); channel (text)."
+  }
+]
