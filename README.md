@@ -6,10 +6,11 @@ The system retrieves relevant tables from the WikiTableQuestions (WTQ) dataset u
 The WTQ-based system is the **main** implementation.  
 A smaller legacy Spider-based version is included at the end for reference.
 
+The baseline reproduction is based off the concepts/methods from Jonathan Herzig et al. research paper on [Open Domain Question Answering over Tables via Dense Retrieval](https://ar5iv.labs.arxiv.org/html/2103.12011)
+
 ---
 
 ## Main Pipeline (WikiTableQuestions WTQ)
-
 
 
 ### Installation
