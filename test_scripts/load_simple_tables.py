@@ -41,10 +41,8 @@ TABLE_SPECS = {
 
 
 def main():
-    # Determine script directory
     script_dir = Path(__file__).parent
 
-    # Target data directory is ../data
     out_dir = (script_dir / ".." / "data").resolve()
     out_dir.mkdir(parents=True, exist_ok=True)
 
@@ -53,21 +51,16 @@ def main():
     for name, spec in TABLE_SPECS.items():
         print(f"\n=== Preparing table: {name} ===")
 
-        # Load dataset from seaborn
         df = sns.load_dataset(name)
 
-        # Subselect columns
         cols = [c for c in spec["columns"] if c in df.columns]
         df = df[cols]
 
-        # Drop missing values
         df = df.dropna()
 
-        # Truncate to n_rows
         n_rows = spec.get("n_rows", len(df))
         df = df.head(n_rows)
 
-        # Save to CSV
         out_path = out_dir / f"{name}.csv"
         df.to_csv(out_path, index=False)
 

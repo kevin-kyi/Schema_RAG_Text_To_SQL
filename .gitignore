@@ -1,2 +1,3 @@
-spider_data/
+data/spider_raw/
+data/tables/
 __pycache__/

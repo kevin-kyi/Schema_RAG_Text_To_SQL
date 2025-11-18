@@ -1,5 +1,3 @@
-"""Schema-aware retrieval augmented generation utilities for TAPAS QA."""
-
 from __future__ import annotations
 
 import json
@@ -25,8 +23,6 @@ TAPAS_MODEL_NAME = "google/tapas-large-finetuned-wtq"
 
 @dataclass
 class TableDocument:
-    """Holds metadata for a table that we can retrieve."""
-
     name: str
     path: Path | None
     schema_text: str
@@ -50,8 +46,6 @@ def describe_table_schema(
     total_rows: int | None = None,
     column_type_hints: Dict[str, str] | None = None,
 ) -> str:
-    """Create a natural-language description of a table schema."""
-
     dtype_items = []
     for col in df.columns:
         dtype = str(df[col].dtype)
@@ -77,8 +71,6 @@ def describe_table_schema(
 
 
 def load_table_documents(data_dir: Path | None, sample_rows: int = 2) -> List[TableDocument]:
-    """Scan ``data_dir`` for CSV files and summarize their schemas."""
-
     if data_dir is None:
         return []
 
@@ -105,10 +97,8 @@ def load_table_documents(data_dir: Path | None, sample_rows: int = 2) -> List[Ta
 
     return documents
 
-
 def _escape_identifier(identifier: str) -> str:
     return identifier.replace('"', '""')
-
 
 def _make_sqlite_table_loader(db_path: Path, table_name: str) -> Callable[[], pd.DataFrame]:
     escaped_name = _escape_identifier(table_name)
@@ -125,8 +115,6 @@ def load_spider_table_documents(
     spider_dir: Path | None,
     sample_rows: int = 2,
 ) -> List[TableDocument]:
-    """Parse Spider dataset schemas and return one TableDocument per SQLite table."""
-
     if spider_dir is None:
         return []
 
@@ -207,8 +195,6 @@ def load_spider_table_documents(
 
 
 class SchemaEncoder:
-    """Sentence transformer style encoder with mean pooling."""
-
     def __init__(self, model_name: str = EMBED_MODEL_NAME, device: str | None = None):
         self.model_name = model_name
         self.tokenizer = AutoTokenizer.from_pretrained(model_name)
@@ -219,8 +205,6 @@ class SchemaEncoder:
 
     @torch.inference_mode()
     def encode(self, texts: Sequence[str], batch_size: int = 16) -> np.ndarray:
-        """Encode texts into L2-normalized embeddings."""
-
         vectors: List[np.ndarray] = []
         for start in range(0, len(texts), batch_size):
             batch = texts[start : start + batch_size]
@@ -246,8 +230,6 @@ class SchemaEncoder:
 
 
 class SchemaVectorStore:
-    """FAISS-backed vector store over table schema descriptions."""
-
     def __init__(self, encoder: SchemaEncoder, documents: Sequence[TableDocument]):
         self.encoder = encoder
         self.documents = list(documents)
@@ -267,8 +249,6 @@ class SchemaVectorStore:
         self.dim = dim
 
     def search(self, query: str, top_k: int = 3) -> List[Tuple[TableDocument, float]]:
-        """Return ``top_k`` documents ranked by cosine similarity."""
-
         if not self.index:
             raise RuntimeError("Vector index has not been built yet.")
 
@@ -287,8 +267,6 @@ class SchemaVectorStore:
 
 
 class TapasAnswerer:
-    """Thin wrapper around TAPAS to keep inference code isolated."""
-
     def __init__(self, model_name: str = TAPAS_MODEL_NAME, device: str | None = None):
         self.tokenizer = TapasTokenizer.from_pretrained(model_name)
         self.model = TapasForQuestionAnswering.from_pretrained(model_name)
@@ -298,8 +276,6 @@ class TapasAnswerer:
 
     @torch.inference_mode()
     def answer(self, table: pd.DataFrame, question: str) -> dict:
-        """Run TAPAS on a table/question pair and return an answer payload."""
-
         table = table.astype(str)
         inputs = self.tokenizer(
             table=table,
@@ -376,8 +352,6 @@ class TapasAnswerer:
 
 
 class SchemaRAGPipeline:
-    """High level helper that glues retrieval and TAPAS answering together."""
-
     def __init__(
         self,
         data_dir: Path | None = None,
@@ -405,8 +379,6 @@ class SchemaRAGPipeline:
         return self.vector_store.search(query, top_k=top_k)
 
     def answer(self, query: str, top_k: int = 1) -> List[dict]:
-        """Return TAPAS answers for the ``top_k`` retrieved tables."""
-
         results = []
         for doc, score in self.retrieve(query, top_k=top_k):
             df = doc.load_dataframe()

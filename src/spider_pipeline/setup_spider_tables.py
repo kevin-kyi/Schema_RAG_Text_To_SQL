@@ -8,19 +8,12 @@ from typing import Dict, Any, List, Optional
 import pandas as pd
 import shutil
 
-# ---------------- CONFIG ---------------- #
-
-# Google Drive file id for Spider dataset zip (from official Spider page)
 SPIDER_FILE_ID = "1403EGqzIDoHMdQF4c9Bkyl7dZLZ5Wt6J"
 
-# Limit rows per table when exporting to CSV (None = all rows)
-MAX_ROWS_PER_TABLE: Optional[int] = None  # e.g., 500 if you want to cap size
+MAX_ROWS_PER_TABLE: Optional[int] = None  
 
-# Whether to physically delete non-dev databases from spider_root/database/
 PRUNE_NON_DEV_DATABASES = True
 
-
-# ---------------- HELPERS ---------------- #
 
 def load_json(path: Path):
     with path.open("r", encoding="utf-8") as f:
@@ -28,54 +21,42 @@ def load_json(path: Path):
 
 
 def ensure_spider_downloaded(spider_raw_dir: Path) -> Path:
-    """
-    Download + extract Spider dataset into spider_raw_dir IF NEEDED.
 
-    Returns:
-        spider_root: path containing tables.json, dev.json, database/
-    """
     spider_raw_dir.mkdir(parents=True, exist_ok=True)
 
-    # If we already see a tables.json, reuse it
     existing_tables = list(spider_raw_dir.rglob("tables.json"))
     if existing_tables:
         spider_root = existing_tables[0].parent
-        print(f"[INFO] Found existing tables.json at {existing_tables[0]}")
-        print(f"[INFO] Treating {spider_root} as spider_root.")
+        print(f"Found existing tables.json at {existing_tables[0]}")
+        print(f"Treating {spider_root} as spider_root.")
         return spider_root
 
-    # Otherwise, download spider_data.zip
     zip_path = spider_raw_dir / "spider_data.zip"
     if not zip_path.exists():
-        print("[INFO] Spider not found locally. Downloading spider_data.zip via gdown...")
         from shutil import which
         if which("gdown") is None:
             raise RuntimeError(
-                "gdown not found. Please install:\n"
-                "    pip install gdown\n"
-                "or manually download spider_data.zip into data/spider_raw/."
+                "gdown not found.\n"
+
             )
-        # Download using file id
         subprocess.check_call(
             ["gdown", "--id", SPIDER_FILE_ID, "-O", str(zip_path)]
         )
-        print(f"[OK] Downloaded spider_data.zip to {zip_path}")
+        print(f"Downloaded spider_data.zip to {zip_path}")
     else:
-        print(f"[INFO] Using existing zip at {zip_path}")
+        print(f"Using existing zip at {zip_path}")
 
-    # Extract
-    print(f"[INFO] Extracting {zip_path} into {spider_raw_dir} ...")
+    print(f"Extracting {zip_path} into {spider_raw_dir} ...")
     with zipfile.ZipFile(zip_path, "r") as zf:
         zf.extractall(spider_raw_dir)
 
-    # Now locate tables.json
     existing_tables = list(spider_raw_dir.rglob("tables.json"))
     if not existing_tables:
         raise FileNotFoundError(
             f"After extracting, could not find tables.json under {spider_raw_dir}"
         )
     spider_root = existing_tables[0].parent
-    print(f"[OK] Spider root detected at: {spider_root}")
+    print(f"Spider root detected at: {spider_root}")
     return spider_root
 
 
@@ -85,7 +66,7 @@ def get_dev_db_ids(spider_root: Path) -> List[str]:
         raise FileNotFoundError(f"Cannot find dev.json at {dev_path}")
     dev_data = load_json(dev_path)
     db_ids = sorted({ex["db_id"] for ex in dev_data})
-    print(f"[INFO] Dev split has {len(db_ids)} databases: {db_ids}")
+    print(f"Dev split has {len(db_ids)} databases: {db_ids}")
     return db_ids
 
 
@@ -94,22 +75,15 @@ def extract_tables_for_db(
     db_file: Path,
     out_tables_dir: Path,
 ) -> List[Dict[str, Any]]:
-    """
-    Export all tables for a single Spider database to CSV and build schema entries.
-
-    Returns:
-        List of schema metadata entries (one per table).
-    """
     db_id = db_meta["db_id"]
     table_names = db_meta["table_names"]
     table_names_original = db_meta["table_names_original"]
     column_names = db_meta["column_names"]
     column_types = db_meta["column_types"]
 
-    # Map from table_idx -> list of columns
     cols_by_table = {i: [] for i in range(len(table_names))}
     for col_idx, (t_idx, col_name) in enumerate(column_names):
-        if t_idx < 0:  # Spider's "*" pseudo-column
+        if t_idx < 0:  
             continue
         col_type = column_types[col_idx]
         cols_by_table[t_idx].append(
@@ -138,7 +112,7 @@ def extract_tables_for_db(
                 df = pd.read_sql_query(query, conn)
             except Exception as e:
                 print(
-                    f"[WARN] Failed to read table {table_name_original} "
+                    f"failed to read table {table_name_original} "
                     f"from {db_file}: {e}"
                 )
                 continue
@@ -170,7 +144,7 @@ def extract_tables_for_db(
             )
 
             print(
-                f"[OK] Exported {db_id}.{table_name} "
+                f"Exported {db_id}.{table_name} "
                 f"({len(df)} rows, {len(df.columns)} cols) -> {csv_path}"
             )
     finally:
@@ -186,10 +160,9 @@ def main():
     data_root = project_root / "data"
     spider_raw_dir = data_root / "spider_raw"
 
-    print(f"[INFO] Project root: {project_root}")
-    print(f"[INFO] Data root:    {data_root}")
+    print(f"Project root: {project_root}")
+    print(f"Data root:    {data_root}")
 
-    # 1) Download & extract Spider if needed
     spider_root = ensure_spider_downloaded(spider_raw_dir)
 
     tables_json_path = spider_root / "tables.json"
@@ -198,15 +171,13 @@ def main():
     if not tables_json_path.exists():
         raise FileNotFoundError(f"Cannot find tables.json at {tables_json_path}")
 
-    print(f"[INFO] Reading schema from: {tables_json_path}")
+    print(f"Reading schema from: {tables_json_path}")
     tables_data = load_json(tables_json_path)
 
-    # 2) Get the ~20 dev db_ids
     dev_db_ids = set(get_dev_db_ids(spider_root))
 
-    # 3) Optionally prune other db folders under database/
     if PRUNE_NON_DEV_DATABASES:
-        print("[INFO] Pruning non-dev databases from spider_root/database/ ...")
+        print("Pruning non-dev databases from spider_root/database/ ...")
         for db_dir in db_root.iterdir():
             if not db_dir.is_dir():
                 continue
@@ -214,7 +185,7 @@ def main():
             if db_id not in dev_db_ids:
                 print(f"  - Removing non-dev database folder: {db_dir}")
                 shutil.rmtree(db_dir)
-        print("[OK] Pruning complete.")
+        print("Pruning complete.")
 
     out_tables_dir = data_root / "tables"
     schema_json_path = data_root / "schema.json"
@@ -232,15 +203,14 @@ def main():
         all_schema_entries.extend(schema_entries)
 
     print(
-        f"\n[INFO] Writing schema metadata for {len(all_schema_entries)} tables "
+        f"\nWriting schema metadata for {len(all_schema_entries)} tables "
         f"to {schema_json_path}"
     )
     schema_json_path.parent.mkdir(parents=True, exist_ok=True)
     with schema_json_path.open("w", encoding="utf-8") as f:
         json.dump(all_schema_entries, f, indent=2, ensure_ascii=False)
 
-    print("[DONE] 20 dev databases exported and schema.json created.")
-
+    print("FINISHED! 20 dev databases exported and schema.json created.")
 
 if __name__ == "__main__":
     main()

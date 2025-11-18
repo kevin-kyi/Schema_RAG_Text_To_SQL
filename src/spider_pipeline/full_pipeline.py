@@ -1,5 +1,3 @@
-"""Command-line entry point for the schema-aware RAG + TAPAS pipeline."""
-
 from __future__ import annotations
 
 import argparse
@@ -67,8 +65,6 @@ def build_arg_parser() -> argparse.ArgumentParser:
 
 
 def render_result_block(result: dict, idx: int) -> str:
-    """Format a pipeline result for human-friendly stdout."""
-
     wrapper = textwrap.TextWrapper(
         width=100,
         initial_indent="    ",
