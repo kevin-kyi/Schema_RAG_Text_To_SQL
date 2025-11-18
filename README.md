@@ -71,12 +71,7 @@ data/wtq_hf/
 python src/wtq_pipeline/build_schema.py
 ```
 
-Generates a new `schema.json` with:
-
-- table_name  
-- columns  
-
-(no semantic names or descriptions)
+Generates a new `schema.json` used to build embeddings:
 
 ### **3. Run the Notebook**
 
