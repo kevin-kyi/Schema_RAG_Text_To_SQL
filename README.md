@@ -27,7 +27,7 @@ pip install -r requirements.txt
 Open the notebook:
 
 ```
-src/wtq//wtq_final_pipeline.ipynb
+src/wtq_pipeline/wtq_final_pipeline.ipynb
 ```
 
 Run all cells from top to bottom.
